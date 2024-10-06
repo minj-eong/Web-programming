@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Horizontal Zoom</title>
+</head>
+<body>
+    <h1>클릭하면 2배,3배,4배로 옆으로 늘어납니다.</h1>
+    <br><hr>
+    <img id="image" src="스폰지밥.png" alt="Sample Image" onclick="zoomImage()" />
+
+    <script>
+        let scaleX = 1;
+        function zoomImage() {
+            scaleX = (scaleX % 4) + 1;  // 1, 2, 3, 4 반복
+            document.getElementById('image').style.transform = `scaleX(${scaleX})`;
+        }
+    </script>
+</body>
+</html>
