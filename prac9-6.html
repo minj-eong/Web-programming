@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>onwheel</title>
+        <script>
+            function zoomImage(event, img) {
+                event.preventDefault();
+
+                let currentWidth = img.width;
+                let currentHeight = img.height;
+
+                if (event.deltaY < 0) {
+                    img.width = currentWidth * 0.95;
+                    img.height = currentHeight * 0.95;
+                } else {
+                    img.width = currentWidth * 1.05;
+                    img.height = currentHeight * 1.05;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>마우스 휠을 이용한 확대/축소</h2>
+        <hr>
+        <p>이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.</p>
+        <img src="망고.png" alt="img" width="300" height="300" onwheel="zoomImage(event, this)">
+    </body>
+</html>
