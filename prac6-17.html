@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>for문</title>
+    </head>
+    <body>
+        <h2>for문으로 10px~35px 크기 출력</h2>
+        <hr>
+        <script>
+            for(let size=10; size<=35;size+=5){
+                //글자 크기를 10px부터 35px까지 5씩 증가시키며 반복
+                document.write("<span ");
+                //글자 크기 스타일을 적용하기 위해 <span>태그 시작
+                document.write("style='font-size: " + size + "px'>");
+                //글자의 크기를 스타일로 지정(e.g., style='font-size:10px;')
+                document.write(size + "px");
+                //현재 size값과 'px' 출력(e.g., 10px,15px 등)
+                document.write("</span>");
+                //span 태그를 닫고 줄 바꿈을 추가해서 다음 글자가 새로운 줄에 표시되도록 함
+            }
+        </script>
+    </body>
+</html>
