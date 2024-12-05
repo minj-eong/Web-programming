@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Object Generation</title>
+        <script>
+            function register(){
+                this.nStudent++;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>1. 직접 객체 만들기</h2>
+        <br>
+        <script>
+            let course1 = new Object();
+            course1.korName = "웹프로그래밍";
+            course1.engName = "Web Programming";
+            course1.ClassCode = "V02403";
+            course1.nStudent = "0";
+            course1.register = "register";
+            course1.unregister = function(){
+                this.nStudent--;
+            };
+            course1.getStudentCount = function(){
+                return this.nStudent;
+            };
+            document.write("교과목 이름 = ",course1.KorName,"<br>");
+            document.write("교과목 영문 이름 = ",course1.engName,"<br>");
+            document.write("등록 학생 수 = ",course1.getStudentCount(),"<br>");
+        </script>
+        <h2>2. 리터럴 표기법</h2>
+        <br>
+        <script>
+        let course1 = new Object();
+            course1.korName = "웹프로그래밍";
+            course1.engName = "Web Programming";
+            course1.ClassCode = "V02403";
+            course1.nStudent = "0";
+            course1.register = "register";
+            course1.unregister = function(){
+                this.nStudent--;
+            };
+            course1.getStudentCount = function(){
+                return this.nStudent;
+            };
+            document.write("교과목 이름 = ",course1.KorName,"<br>");
+            document.write("교과목 영문 이름 = ",course1.engName,"<br>");
+            document.write("등록 학생 수 = ",course1.getStudentCount(),"<br>");
+        </script>
+        <h2>3. Prototype</h2>
+        <br>
+        <script>
+            function Course(KorName,engName,ClassCode){
+                this.KorName = KorName;
+                this.engName = engName;
+                this.ClassCode = ClassCode;
+                this.nStudent = "0";
+                this.register = register;
+                this.unregister = unregister;
+            };
+        </script>
+    </body>
+</html>
