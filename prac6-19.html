@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>do-while문</title>
+    </head>
+    <body>
+        <h2>do-while문으로 0에서 n까지 합</h2>
+        <hr>
+        <script>
+            let number = prompt("0보다 큰 정수를 입력하시오",0);
+            let i=0;
+            let sum=0;
+            do{
+                sum+=i;
+                i++;
+            }while(i<=number);
+            document.write("1부터 " + number + "까지의 합은 " + sum + "이다.");
+        </script>
+    </body>
+</html>
