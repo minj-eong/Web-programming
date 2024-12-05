@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>switch - Chrome</title>
+    </head>
+    <body>
+        <h2>Switch문으로 커피 주문</h2>
+        <hr>
+        <script>
+            let price = 0;
+            let coffee = prompt("무슨 커피 드릴까요?", "");
+            switch(coffee){
+                case "espresso" :
+                case "에스프레소" : price = 2000;
+                    break;
+                case "카페라떼" : price = 3000;
+                    break;
+                case "바닐라라떼" :price = 4000;
+                    break;
+                default :
+                    document.write(coffee+"은 없는 메뉴입니다");
+                    break;
+            }
+                if(price != 0){
+                    document.write(coffee + "의 가격은 " + price + "입니다.");
+            }
+        </script>
+    </body>
+</html>
